@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <style>
+        img{
+            width: 100px;
+            display: block;
+            margin: auto;
+            border-radius: 20px;
+        }
+        .A{
+            font-size: 30px;
+            margin: auto;
+            margin: 4px;
+            margin-left: 14px;
+            color: yellowgreen;
+        }
+        .account-wall{
+            border: 2px solid rgb(177, 201, 210);
+            width: 600x;
+            margin-top: 2px;
+            padding: 10px;
+            border-radius: 10px;
+            color: yellowgreen;
+            background-color: rgb(251, 251, 251);
+        }
+        input{
+            margin: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {{>navbar}}
+        <div class="AA" class="row my-5">
+            <div class="col-sm-6 col-md-4 mx-auto">
+                
+                <div class="account-wall">
+                    <h1 class="A" class="text-center login-title my-5">Employee login form</h1>
+                    <img src="https://i.pinimg.com/564x/46/5e/d1/465ed15a62706700067ce05878650579.jpg" alt="" class="profile-img">
+                    <form action="/login" class="form-signin" method="post">
+                        <input type="text" class="form-control" placeholder="Email*" name="email" required>
+                        <input type="password" name="password" class="form-control" required placeholder="password*">
+                        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                        <label class="checkbox pull-left mt-3">
+                            <input type="checkbox" value="remember-me">
+                            Remember me
+                        </label>
+                        <a href="#" class="pull-right need-help">Need Help</a><span class="clearfix"></span>
+                    </form>
+                    <a href="/register" class="text-center new-account">Create an account</a>
+                </div>
+            </div>
+        </div>
+        {{>footer}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+
+</body>
+</html>

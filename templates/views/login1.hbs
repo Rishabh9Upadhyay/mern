@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+        .formContainer {
+            border: 2px dashed blue;
+            padding: 2px;
+            text-align: center;
+            background-color: cadetblue;
+            width: 650px;
+            margin-left: 250px;
+            border-radius: 10px;
+        }
+        input{
+            width: 300px;
+            background-color: black;
+            color: yellowgreen;
+            padding: 5px;
+            font-size: 20px;
+            margin: 1px 0px;
+            border-radius: 10px;
+        }
+        .A{
+            width: 112px;
+        }
+        ::placeholder{
+            color: yellowgreen;
+            text-align: center;
+        }
+        button{
+            color: rgb(145, 135, 212);
+            border: 2px dashed red;
+            padding-bottom: 4px;
+            line-height: 25px;
+        }
+        button:hover{
+            background-color: rgb(5, 53, 67);
+            color: rgb(134, 167, 167);
+            font-weight: 800;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        {{>navbar}}
+        <div class="formContainer" id="form2" class="formm">
+            <h1 style="color: green;">for registration click here<button style="font-size: 20px; margin-left: 5px;" id="formBTN2"><a href="/register">Register</a></button></h1>
+            
+            <form action="#">
+                <div class="boxf" id="Emal">
+                    <input type="email" placeholder="Your Email *" required value="" name="email" />
+                </div>
+                <div class="boxf">
+                    <input type="password" required placeholder="Password *" value="" name="password" />
+                </div>
+                <div class="boxf">
+                    <input type="submit" value="Enter">
+                </div>
+            </form>
+        </div>
+    {{>footer}}
+    </div>
+    <script>
+        let a = document.getElementById('formBTN1');
+        console.log(a)
+        a.addEventListener('click',(e)=>{
+            document.getElementById('form1').style.display='none';
+            document.getElementById('form2').style.display='block';
+        })
+        let b = document.getElementById('formBTN2');
+        b.addEventListener('click',(e)=>{
+            document.getElementById('form2').style.display='none';
+            document.getElementById('form1').style.display='block';
+        })
+    </script>
+</body>
+
+</html>
